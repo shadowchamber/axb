@@ -23,12 +23,12 @@ namespace axb.Commands
 
         string branch = "trunc";
         string workingDirectory = @"c:\tfs\";
-        string modelName = "EliciteCustomizations";
+        string modelName = "modelname";
         bool skipGetLatest = false;
-        string collectionUrl = "http://sr6-tfs-pl:8080/tfs/elicite";
-        string tfsRoot = "$/Elicite/";
-        string workspaceName = "EliciteBuildWorkspace4";
-        string userid = "a.pylypenko";
+        string collectionUrl = "http://hostname:8080/tfs/name";
+        string tfsRoot = "$/name/";
+        string workspaceName = "workspacename";
+        string userid = "username";
         string description = "Build";
 
         ClientConfigManager clientConfigManager;

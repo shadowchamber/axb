@@ -24,10 +24,10 @@ namespace axb.Commands
 
 
 
-        [Option('c', "collectionurl", Required = false, HelpText = "collection url", Default = "http://sr6-tfs-pl:8080/tfs/elicite")]
+        [Option('c', "collectionurl", Required = false, HelpText = "collection url")]
         public string CollectionUrl { get; set; }
 
-        [Option('r', "tfsroot", Required = false, HelpText = "tfs root", Default = "$/Elicite/")]
+        [Option('r', "tfsroot", Required = false, HelpText = "tfs root")]
         public string TFSRoot { get; set; }
 
         [Option('l', "clientconfig", Required = true, HelpText = "client config", Default = "build_usp.axc")]
@@ -48,7 +48,7 @@ namespace axb.Commands
         [Option('m', "modelstorebackuppath", Required = false, HelpText = "modelstore backup path")]
         public string ModelstoreBackupPath { get; set; }
 
-        [Option('h', "dbserver", Required = false, HelpText = "database server hostname", Default = "APRIL-SQL")]
+        [Option('h', "dbserver", Required = false, HelpText = "database server hostname")]
         public string DatabaseServer { get; set; }
 
         [Option('d', "dbname", Required = false, HelpText = "database name", Default = "AXB")]

@@ -25,14 +25,14 @@ namespace axb.Commands
         }
 
         string branch = "trunc";
-        string collectionUrl = "http://sr6-tfs-pl:8080/tfs/elicite";
-        string tfsRoot = "$/Elicite/";
+        string collectionUrl = "http://hostname:8080/tfs/name";
+        string tfsRoot = "$/name/";
         string workingDirectory = @"c:\tfs\";
-        string workspaceName = "EliciteBuildWorkspace4";
-        string userid = "a.pylypenko";
+        string workspaceName = "workspacename";
+        string userid = "username";
         string description = "Build";
         string clientConfig = "build_usp.axc";
-        string modelName = "EliciteCustomizations";
+        string modelName = "modelname";
         string sqlBackupFolder = "C:\\SQLDatar\\Backup\\";
         string modelstorePath = "c:\\temp\\";
         string blankDatabaseName = "Blank";
@@ -292,8 +292,8 @@ namespace axb.Commands
 
             mgr = new AOSManager()
             {
-                ServerName = clientConfigManager.ServerName, // "april-ax-build",
-                ServiceId = serverConfigManager.ServerServiceIdentifier, // "AOS60$01",
+                ServerName = clientConfigManager.ServerName, 
+                ServiceId = serverConfigManager.ServerServiceIdentifier, 
                 TimeOutMinutes = 10
             };
 
@@ -646,8 +646,8 @@ namespace axb.Commands
         {
             try
             {
-                string destinationModelstorePath = @"\\172.25.80.72\d$\deploy\latest_" + branch + ".axmodelstore";
-                string previousModelstorePath = @"\\172.25.80.72\d$\deploy\prev_" + branch + ".axmodelstore";
+                string destinationModelstorePath = @"\\hostname\d$\deploy\latest_" + branch + ".axmodelstore";
+                string previousModelstorePath = @"\\hostname\d$\deploy\prev_" + branch + ".axmodelstore";
                                                 
                 log(String.Format("deleting {0}", previousModelstorePath));
                 System.IO.File.Delete(previousModelstorePath);
@@ -667,8 +667,8 @@ namespace axb.Commands
             {
                 try
                 {
-                    string destinationUatModelstorePath = @"\\192.168.200.102\c$\TEMP\latest_uat.axmodelstore";
-                    string previousUatModelstorePath = @"\\192.168.200.102\c$\TEMP\prev_uat.axmodelstore";
+                    string destinationUatModelstorePath = @"\\hostname\c$\TEMP\latest_uat.axmodelstore";
+                    string previousUatModelstorePath = @"\\hostname\c$\TEMP\prev_uat.axmodelstore";
 
                     log(String.Format("deleting {0}", previousUatModelstorePath));
                     System.IO.File.Delete(previousUatModelstorePath);
@@ -689,8 +689,8 @@ namespace axb.Commands
             {
                 try
                 {
-                    string destinationPreprodModelstorePath = @"\\192.168.200.102\c$\TEMP\latest_preprod.axmodelstore";
-                    string previousPreprodModelstorePath = @"\\192.168.200.102\c$\TEMP\prev_preprod.axmodelstore";
+                    string destinationPreprodModelstorePath = @"\\hostname\c$\TEMP\latest_preprod.axmodelstore";
+                    string previousPreprodModelstorePath = @"\\hostname\c$\TEMP\prev_preprod.axmodelstore";
 
                     log(String.Format("deleting {0}", previousPreprodModelstorePath));
                     System.IO.File.Delete(previousPreprodModelstorePath);
@@ -733,7 +733,7 @@ namespace axb.Commands
 
                 string tfsPath = tfsRoot + (branch == "trunc" || branch == "trunk" ? branch : "branches/" + branch);
 
-                var histories = vsStore.QueryHistory(tfsPath + "/EliciteCustomizations", VersionSpec.Latest, 0, RecursionType.Full, null, null, null, Int32.MaxValue, true, false, true);
+                var histories = vsStore.QueryHistory(tfsPath + "/modelname", VersionSpec.Latest, 0, RecursionType.Full, null, null, null, Int32.MaxValue, true, false, true);
 
                 List<String> files = new List<string>();
 

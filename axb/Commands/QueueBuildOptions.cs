@@ -13,7 +13,7 @@ namespace axb.Commands
         [Option('f', "deploybuilddefinition", Required = true, HelpText = "deploy build definition")]
         public string BuildDefinition { get; set; }
 
-        [Option('c', "collectionurl", Required = true, HelpText = "collection url", Default = "http://sr6-tfs-pl:8080/tfs/elicite")]
+        [Option('c', "collectionurl", Required = true, HelpText = "collection url")]
         public string CollectionUrl { get; set; }
 
         [Option('p', "projectname", Required = true, HelpText = "tfs project name")]

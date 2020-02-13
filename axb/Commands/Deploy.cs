@@ -35,8 +35,8 @@ namespace axb.Commands
 
         string branch = "trunc";
         string workingDirectory = @"c:\tfs\";
-        string modelName = "EliciteCustomizations";
-        string workspaceName = "EliciteBuildWorkspace4";
+        string modelName = "modelname";
+        string workspaceName = "workspacename";
         string modelstorePath = "c:\\temp\\";
 
         ClientConfigManager clientConfigManager;

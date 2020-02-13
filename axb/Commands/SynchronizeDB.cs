@@ -23,7 +23,7 @@ namespace axb.Commands
 
         string branch = "trunc";
         string workingDirectory = @"c:\tfs\";
-        string modelName = "EliciteCustomizations";
+        string modelName = "modelname";
 
         ClientConfigManager clientConfigManager;
         ServerConfigManager serverConfigManager;
